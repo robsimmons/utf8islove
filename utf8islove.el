@@ -1,5 +1,27 @@
-;;; ReTeX, Rob's TeX mode
-;;; To see what the code of something is, press C-u C-x =
+;;; utf8islove.el --- Quail package for TeX integration -*-coding: utf-8;-*-
+
+;; Author: Robert J. Simmons
+
+;; Borrows heavily from latin-ltx.el, a Quail package for TeX-style input.
+;; Author: TAKAHASHI Naoto <ntakahas@m17n.org>
+;;         Dave Love <fx@gnu.org>
+
+;; GNU Emacs is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+
+;; GNU Emacs is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs; see the file COPYING.  If not, write to the
+;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;; Note to self: to see what the code of something is, press C-u C-x =
 
 ;;;###autoload
 (modify-coding-system-alist 'file "\\.l?tex\\'" 'utf-8)
@@ -9,7 +31,7 @@
 (require 'cl)
 
 (quail-define-package "UTF8IsLove" "UTF-8" "2" t
-  "Lovely Emacs mode for TeX Unicode integration."
+  "Emacs mode for UTF8IsLove's TeX Unicode integration."
  
  '(("\t" . quail-completion))
  t t nil nil nil nil nil nil nil t)
