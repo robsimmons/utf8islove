@@ -1,0 +1,35 @@
+UTF-8 Is Love
+Robert J. Simmons
+rjsimmon@cs.cmu.edu
+
+There are two parts to this package. First, an \input-able TeX file that allows
+TeX to correctly interpret UTF-8 characters (this is written entirely by me
+and therefore released under the MIT License) and an Emacs "Quail" mode that 
+makes it easy to use LaTeX syntax to input Unicode into TeX files (modified 
+from Emacs's latin-ltx.el and consequently released under the GNU General 
+Public License).
+
+I use the TeX Live distribution for OS X along with TeXShop, which means that
+I clone the repository to the directory to ~/Library/texmf/tex/latex/utf8islove.
+This effectively puts utf8islove.el in the search path for LaTeX, and so if 
+I start my tex files with the following:
+
+\documentclass[12pt]{article}
+\input{utf8islove}
+
+the correct TeX magic gets imported into the file: you can have unicode 
+characetrs in your LaTeX file, such as "δαíμων," and it will interpretet
+them in the correct math-y font whether or not the characters are in math mode
+(by using \ensuremath).
+
+The other key component is an Emacs mode that allows us to type the series
+of characters "\delta\alpha\'i\mu\omega\nu" and have "δαíμων" show up in our
+Emacs buffer. I just add the following lines to my .emacs file:
+
+;; Set Up UTF8IsLove
+(load "~/Library/texmf/tex/latex/utf8islove/utf8islove.el")
+
+Instructions for getting this to work cleanly on other systems would be much
+appreciated!
+
+ - Rob
