@@ -151,7 +151,9 @@
  ("\\\"{o}" ?ö) ("\\\"o" ?ö)
  ("\\\k{o}" ?ǫ)
  ("$\\div$" ?÷) ("\\div" ?÷)
- ("\\o" ?ø) ;; ("{\\o}" ?ø)
+ ; No other way of making this character, but it's gotten in my way before.
+ ; - RJS 4/21/2011
+ ;("\\o" ?ø) ;; ("{\\o}" ?ø)
  ("\\`{u}" ?ù) ("\\`u" ?ù)
  ("\\'{u}" ?ú) ("\\'u" ?ú)
  ("\\^{u}" ?û) ("\\^u" ?û)
@@ -741,7 +743,7 @@
  ("\\nleqslant" ?≰)
  ("\\nless" ?≮)
  ("\\nmid" ?∤)
- ("\\not" ?̸)
+ ;("\\not" ?̸) ;; No need to make this - RJS 4/21/2011
  ("\\notin" ?∉)
  ("\\nparallel" ?∦)
  ("\\nprec" ?⊀)
